@@ -66,8 +66,11 @@ function geo_ss4u_get_options() {
 	'north_bound'         => get_option( 'gms_north_bound' ),
 	'east_bound'          => get_option( 'gms_east_bound' ),
 	'max_radius'          => get_option( 'gms_search_radius' ),
-	'place_marker_url'    => GEO_SS4U_MAP_URL . '/assets/images/marker_bule.png',
-	'default_marker_url'  => GEO_SS4U_MAP_URL . '/assets/images/marker_default.png',
+	'train_station'		  => GEO_SS4U_MAP_URL . '/assets/images/train_marker.png',
+	'bank'				  => GEO_SS4U_MAP_URL . '/assets/images/bank_marker.png',
+	'hospital'			  => GEO_SS4U_MAP_URL . '/assets/images/hospital_marker.png',
+	'bus_station'		  => GEO_SS4U_MAP_URL . '/assets/images/bus_marker.png',
+	'default_marker_url'  => GEO_SS4U_MAP_URL . '/assets/images/default_marker.png',
 	);
 }
 
@@ -77,7 +80,7 @@ function geo_ss4u_get_options() {
 function geo_ss4u_map_scripts() {
 	wp_enqueue_script( 'gms-google-map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places&sensor=false', array(), false, true );
 	wp_enqueue_script( 'gms-google-map-chosen', GEO_SS4U_MAP_URL . '/assets/js/chosen/jquery.chosen.js', array(), false, true );
-	wp_register_script( 'gms-script', GEO_SS4U_MAP_URL . '/assets/js/gms-script.min.js', array( 'jquery' ), GEO_SS4U_MAP_VERSION, true );
+	wp_register_script( 'gms-script', GEO_SS4U_MAP_URL . '/assets/js/gms-script.js', array( 'jquery' ), GEO_SS4U_MAP_VERSION, true );
 	wp_enqueue_script( 'gms-script' );
 	wp_localize_script( 'gms-script', 'objValues', geo_ss4u_get_options() );
 }
@@ -88,7 +91,7 @@ add_action( 'wp_footer', 'geo_ss4u_map_scripts', 15 );
  */
 function geo_ss4u_map_style() {
 	if ( ! wp_style_is( 'style', 'registered' ) ) {
-		wp_register_style( 'gms-style', GEO_SS4U_MAP_URL . '/assets/css/gms-style.min.css', array(), GEO_SS4U_MAP_VERSION );
+		wp_register_style( 'gms-style', GEO_SS4U_MAP_URL . '/assets/css/gms-style.css', array(), GEO_SS4U_MAP_VERSION );
 		wp_enqueue_style( 'gms-style' );
 		wp_register_style( 'gms-style-chosen', GEO_SS4U_MAP_URL . '/assets/js/chosen/chosen.css', array(), GEO_SS4U_MAP_VERSION );
 		wp_enqueue_style( 'gms-style-chosen' );

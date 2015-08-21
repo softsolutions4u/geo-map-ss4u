@@ -1,3 +1,6 @@
+a {
+    font-size: 15px;
+}
 .gs-full-width {
     float: left;
     width: 100%;
@@ -6,28 +9,27 @@
     width: 50%;
     float: left;
 }
-
-#gs-radius-block { margin: 10px 0; }
-
+#gs-radius-block {
+    margin: 10px 0;
+    position: relative;
+}
 div#map-canvas {
     float: left;
     width: 100%;
     height: 300px;
 }
-
-.widget_geoss4u_widget div#locationField { padding: 5px 0 15px; }
-
+.widget_geoss4u_widget div#locationField {
+    padding: 5px 0 15px;
+}
 .widget_geoss4u_widget input#autocomplete {
     width: 324px;
     margin: 0;
     padding: 8px;
 }
-
 aside.widget_geoss4u_widget {
     height: auto;
     float: left;
 }
-
 button#searchbutton {
     float: left;
     margin-top: 10px;
@@ -53,51 +55,171 @@ div#radius_level_chosen a {
     height: auto;
     padding: 6px;
 }
-div#radius_level_chosen .chosen-single div b { background-position-y: 8px; }
-
-#radius_level_chosen .chosen-results li:before { content: ''; }
-
-#radius_level_chosen .chosen-results li { margin: 0; }
-
+div#radius_level_chosen .chosen-single div b {
+    background-position-y: 8px;
+}
+#radius_level_chosen .chosen-results li:before {
+    content: '';
+}
+#radius_level_chosen .chosen-results li {
+    margin: 0;
+}
 #gs-nearby-results {
     float: left;
     width: 100%;
-    height: 175px;
-    overflow-x: hidden;
     margin-top: 15px;
+    position: relative;
 }
-#gs-nearby-list {
-    list-style: none;
-    padding: 10px;
-    padding-left: 0; 
+#gs-nearby-results-cont {
+    float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    min-height: 50px;
+    max-height: 250px;
+}
+#gs-nearby-results #gs-nearby-list {
+    padding-left: 0;
+    background: rgba(206, 206, 206, 0.31);
+    margin-left: 0px;
 }
 #gs-nearby-list h3 {
     padding-left: 10px;
     cursor: pointer;
 }
-#gs-nearby-results ul li:before { 
+#gs-nearby-list #train_station:before,
+#gs-nearby-list #bank:before,
+#gs-nearby-list #hospital:before,
+#gs-nearby-list #bus_station:before {
     width: 14px;
     height: 20px;
     float: left;
     content: '';
-    background: url("../images/marker_bule.png");
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    background-position: 0px 5px;
-    position: absolute;
-
 }
 .address_list {
     position: relative;
     float: left;
 }
 li.address_list p {
-    float: left;
-    width: 100%;
     padding-left: 20px;
 }
-
-#gs-nearby-results li { 
-    border-bottom: 1px solid #E4E0E0; 
+#gs-nearby-results li {
+    border-bottom: 1px solid #E4E0E0;
     width: 100%;
+    margin-bottom: 0;
+    margin-top: 8px;
+    padding: 0 10px;
+}
+#gs-place-types {
+    float: left;
+    width: 100%;
+}
+#gs-place-types input {
+    float: left;
+    margin-top: 6px;
+}
+#gs-place-types .gs-place-type {
+    float: left;
+    margin-top: 0;
+    position: relative;
+    width: 90%;
+}
+aside.widget_geo_map_ss4u_widget {
+    float: left
+}
+#gs-content .train_station:before,
+#gs-content .bank:before,
+#gs-content .hospital:before,
+#gs-content .bus_station:before {
+    width: 15px;
+    height: 20px;
+    margin-right: 6px;
+    float: left;
+    content: '';
+}
+.train_station:before {
+    background: url("../images/train_marker.png");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+    position: relative;
+}
+.bank:before {
+    background: url("../images/bank_marker.png");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+    position: relative;
+}
+.hospital:before {
+    background: url("../images/hospital_marker.png");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+    position: relative;
+}
+.bus_station:before {
+    background: url("../images/bus_marker.png");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+    position: relative;
+}
+.scroll {
+    display: none;
+    font-style: italic;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #2E0AA2;
+    font-size: 16px;
+}
+#gs-scroll-down {
+    float: right;
+    width: 100%;
+}
+#searchPlacesFrm li.options {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+#gs-place-types .options:before {
+    content: '';
+}
+#paraText {
+    float: left;
+    width: 100%;
+}
+#gs-content ul {
+    list-style-type: none;
+    width: 100%;
+    float: left;
+}
+#title {
+    margin-bottom: 26px;
+}
+#autocomplete.alert {
+    border-color: #a94442;
+}
+#autocomplete.alert::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    
+    color: #FFABB8;
+}
+#autocomplete.alert:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    
+    color: #FFABB8;
+    opacity: 1;
+}
+#autocomplete.alert::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    
+    color: #FFABB8;
+    opacity: 1;
+}
+#autocomplete.alert:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    
+    color: #FFABB8;
 }
