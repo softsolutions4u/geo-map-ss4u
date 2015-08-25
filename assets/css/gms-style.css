@@ -1,6 +1,8 @@
+/* General styles*/
 a {
     font-size: 15px;
 }
+
 .gs-full-width {
     float: left;
     width: 100%;
@@ -9,67 +11,140 @@ a {
     width: 50%;
     float: left;
 }
-#gs-radius-block {
-    margin: 10px 0;
-    position: relative;
+
+aside.widget_geo_map_ss4u_widget {
+    float: left
 }
-div#map-canvas {
+
+#map-canvas {
     float: left;
     width: 100%;
     height: 300px;
 }
-.widget_geoss4u_widget div#locationField {
-    padding: 5px 0 15px;
+
+/* Input field style starts here*/
+#autocomplete.alert {
+    border-color: #a94442;
 }
-.widget_geoss4u_widget input#autocomplete {
-    width: 324px;
-    margin: 0;
-    padding: 8px;
+
+#autocomplete.alert::-webkit-input-placeholder {
+    color: #FFABB8;
 }
-aside.widget_geoss4u_widget {
-    height: auto;
-    float: left;
+#autocomplete.alert:-moz-placeholder {
+    color: #FFABB8;
+    opacity: 1;
 }
-button#searchbutton {
-    float: left;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+#autocomplete.alert::-moz-placeholder {
+    color: #FFABB8;
+    opacity: 1;
 }
-#radius-level {
-    width: 100px;
-    padding: 8px;
-    float: left;
+
+#autocomplete.alert:-ms-input-placeholder {
+    color: #FFABB8;
 }
-#radius_level_chosen {
-    float: left;
-    margin-right: 5px;
-}
+/* Input field style ends here*/
+
+/* Chosen dropdown style starts here.*/
 #gs-fields-block p {
     margin: 0;
     padding: 0;
     margin-top: 10px;
     float: left;
 }
-div#radius_level_chosen a {
+
+#gs-radius-block {
+    margin: 10px 0;
+    position: relative;
+}
+
+#radius-level {
+    width: 100px;
+    padding: 8px;
+    float: left;
+}
+
+#radius_level_chosen {
+    float: left;
+    margin-right: 5px;
+}
+
+#gs-radius-block #radius_level_chosen a {
     line-height: inherit;
     height: auto;
     padding: 6px;
 }
-div#radius_level_chosen .chosen-single div b {
+
+div#gs-radius-block #radius_level_chosen .chosen-single div b {
     background-position-y: 8px;
 }
+
 #radius_level_chosen .chosen-results li:before {
     content: '';
 }
+
 #radius_level_chosen .chosen-results li {
     margin: 0;
 }
+/* Chosen dropdown style ends here.*/
+
+/* Search types radio styles*/
+#gs-place-types {
+    float: left;
+    width: 100%;
+}
+
+#paraText {
+    float: left;
+    width: 100%;
+}
+
+#gs-content ul {
+    list-style-type: none;
+    width: 100%;
+    float: left;
+}
+
+#gs-place-types .options:before {
+    content: '';
+}
+
+#searchPlacesFrm li.options {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#gs-place-types input {
+    float: left;
+    margin-top: 6px;
+}
+
+#gs-place-types .gs-place-type {
+    float: left;
+    margin-top: 0;
+    position: relative;
+    width: 90%;
+}
+
+button#searchbutton {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Search results style starts here */
 #gs-nearby-results {
     float: left;
     width: 100%;
     margin-top: 15px;
     position: relative;
 }
+
+#title {
+    margin-bottom: 26px;
+}
+
 #gs-nearby-results-cont {
     float: left;
     overflow-x: hidden;
@@ -78,15 +153,18 @@ div#radius_level_chosen .chosen-single div b {
     min-height: 50px;
     max-height: 250px;
 }
+
 #gs-nearby-results #gs-nearby-list {
     padding-left: 0;
     background: rgba(206, 206, 206, 0.31);
-    margin-left: 0px;
+    margin: 0;
 }
+
 #gs-nearby-list h3 {
     padding-left: 10px;
     cursor: pointer;
 }
+
 #gs-nearby-list #train_station:before,
 #gs-nearby-list #bank:before,
 #gs-nearby-list #hospital:before,
@@ -96,13 +174,7 @@ div#radius_level_chosen .chosen-single div b {
     float: left;
     content: '';
 }
-.address_list {
-    position: relative;
-    float: left;
-}
-li.address_list p {
-    padding-left: 20px;
-}
+
 #gs-nearby-results li {
     border-bottom: 1px solid #E4E0E0;
     width: 100%;
@@ -110,23 +182,16 @@ li.address_list p {
     margin-top: 8px;
     padding: 0 10px;
 }
-#gs-place-types {
-    float: left;
-    width: 100%;
-}
-#gs-place-types input {
-    float: left;
-    margin-top: 6px;
-}
-#gs-place-types .gs-place-type {
-    float: left;
-    margin-top: 0;
+
+.address_list {
     position: relative;
-    width: 90%;
+    float: left;
 }
-aside.widget_geo_map_ss4u_widget {
-    float: left
+
+li.address_list p {
+    padding-left: 20px;
 }
+
 #gs-content .train_station:before,
 #gs-content .bank:before,
 #gs-content .hospital:before,
@@ -137,34 +202,39 @@ aside.widget_geo_map_ss4u_widget {
     float: left;
     content: '';
 }
+
 .train_station:before {
     background: url("../images/train_marker.png");
     background-size: 15px 15px;
     background-repeat: no-repeat;
-    background-position: 0px 5px;
+    background-position: 0 5px;
     position: relative;
 }
+
 .bank:before {
     background: url("../images/bank_marker.png");
     background-size: 15px 15px;
     background-repeat: no-repeat;
-    background-position: 0px 5px;
+    background-position: 0 5px;
     position: relative;
 }
+
 .hospital:before {
     background: url("../images/hospital_marker.png");
     background-size: 15px 15px;
     background-repeat: no-repeat;
-    background-position: 0px 5px;
+    background-position: 0 5px;
     position: relative;
 }
+
 .bus_station:before {
     background: url("../images/bus_marker.png");
     background-size: 15px 15px;
     background-repeat: no-repeat;
-    background-position: 0px 5px;
+    background-position: 0 5px;
     position: relative;
 }
+
 .scroll {
     display: none;
     font-style: italic;
@@ -174,52 +244,9 @@ aside.widget_geo_map_ss4u_widget {
     color: #2E0AA2;
     font-size: 16px;
 }
+
 #gs-scroll-down {
     float: right;
     width: 100%;
 }
-#searchPlacesFrm li.options {
-    float: left;
-    width: 100%;
-    margin-bottom: 0;
-}
-#gs-place-types .options:before {
-    content: '';
-}
-#paraText {
-    float: left;
-    width: 100%;
-}
-#gs-content ul {
-    list-style-type: none;
-    width: 100%;
-    float: left;
-}
-#title {
-    margin-bottom: 26px;
-}
-#autocomplete.alert {
-    border-color: #a94442;
-}
-#autocomplete.alert::-webkit-input-placeholder {
-    /* WebKit, Blink, Edge */
-    
-    color: #FFABB8;
-}
-#autocomplete.alert:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    
-    color: #FFABB8;
-    opacity: 1;
-}
-#autocomplete.alert::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    
-    color: #FFABB8;
-    opacity: 1;
-}
-#autocomplete.alert:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    
-    color: #FFABB8;
-}
+/* Search results style ends here */

@@ -1,7 +1,6 @@
 <div id="gs-content" class="gs-full-width">
     <div id="gs-fields-block" class="gs-full-width">
         <div id="searchPlacesFrm">
-            <!--<div id="alert_msg" class="alert-danger alert"></div>-->
             <input class='gs-full-width' id="autocomplete" placeholder="Enter your search term" type="text" />
             <div id="gs-fields-block" class="gs-full-width">
                 <p>Search for the selected types within a radius of</p>
@@ -26,6 +25,10 @@
                 <p id="paraText">Select any one option</p>
 				<ul>
                 <?php
+				/**
+				* Search types radio button
+				* @package geo-map-ss4u
+				*/
                 $place_types = array('train_station' => 'Train station', 'bank' => 'Bank', 'hospital' => 'Hospital', 'bus_station' => 'Bus station');
                 foreach ($place_types as $place_type => $place_label) {
                     ?>
@@ -48,7 +51,6 @@
 				</ul>
             </div>
             <button type="button" name="searchbutton" id="searchbutton" >Search</button>
-            <div id="alert_msg"></div>
         </div>
     </div>
     <div id="map-canvas"></div>

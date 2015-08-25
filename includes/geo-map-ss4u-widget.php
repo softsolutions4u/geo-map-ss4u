@@ -34,7 +34,7 @@ class Geo_Map_Ss4u_Widget extends \WP_Widget {
 
 	/**
 	 * Widget form creation
-	 * @param type $instance Instance.
+	 * @param array $instance Instance.
 	 */
 	function form($instance) {
 
@@ -55,9 +55,9 @@ class Geo_Map_Ss4u_Widget extends \WP_Widget {
 
 	/**
 	 * Update the value
-	 * @param type $new_instance New Instance.
-	 * @param type $old_instance Old Instance.
-	 * @return type
+	 * @param array New Instance.
+	 * @param array Old Instance.
+	 * @return string
 	 */
 	function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
@@ -67,8 +67,8 @@ class Geo_Map_Ss4u_Widget extends \WP_Widget {
 	}
 	/**
 	 * Widget
-	 * @param type $args Arguments.
-	 * @param type $instance Instance.
+	 * @param string $args Arguments.
+	 * @param array $instance Instance.
 	 */
 	function widget( $args, $instance ) {
 		extract( $args );

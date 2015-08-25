@@ -6,12 +6,14 @@
 
 $saveSetting = isset( $_POST['gms_hidden'] ) ? \wp_unslash( $_POST['gms_hidden'] ) : '';
 if ( $saveSetting === 'Y' ) {
+	// Get POST values
 	$south_bound	= isset( $_POST['gms_south_bound'] )   ? \wp_unslash( $_POST['gms_south_bound'] )   : 0;
 	$west_bound		= isset( $_POST['gms_west_bound'] )    ? \wp_unslash( $_POST['gms_west_bound'] )    : 0;
 	$north_bound	= isset( $_POST['gms_north_bound'] )   ? \wp_unslash( $_POST['gms_north_bound'] )   : 0;
 	$east_bound		= isset( $_POST['gms_east_bound'] )    ? \wp_unslash( $_POST['gms_east_bound'] )    : 0;
 	$search_radius	= isset( $_POST['gms_search_radius'] ) ? \wp_unslash( $_POST['gms_search_radius'] ) : 0;
 
+	// Update the values
 	update_option( 'gms_south_bound',    $south_bound );
 	update_option( 'gms_west_bound',     $west_bound );
 	update_option( 'gms_north_bound',    $north_bound );
@@ -21,6 +23,7 @@ if ( $saveSetting === 'Y' ) {
 	<div class="updated"><p><strong><?php esc_html_e( 'Options saved.' ); ?></strong></p></div>
 	<?php
 } else {
+	// Get values from database
 	$south_bound	= get_option( 'gms_south_bound' );
 	$west_bound		= get_option( 'gms_west_bound' );
 	$north_bound	= get_option( 'gms_north_bound' );
