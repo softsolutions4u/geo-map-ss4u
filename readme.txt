@@ -1,11 +1,25 @@
-=== GEO Map SS4U ===
-Contributors: SS4U
-Donate link: http://ss4u.com/
-Tags: Geo-location, Geolocation, zipcode search, radius search, store locator, address search, google v3 , Google maps, search locations, Geolocate, GEO.
-Requires at least: 1.0
-License URI: http://www.softsolutions4u.com
+=== Geo Map SS4U ===
+Author: SoftSolutions4U
+Author URI: http://softsolutions4u.com
+Tags: Geo-location, Geolocation, zipcode search, radius search, train station search, bus station search,search hospital,  google v3 , Google maps, search locations, Geolocate, GEO location,
+Requires at least: Wordpress version 4.2.2
+License: GNU GENERAL PUBLIC LICENSE
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Version:1.0
+Description: Using Google's API tools GEO Map WP provides an advance proximity search for any post type or buddypress's members based on a given address and radius.
 
-Using Google's API tools GEO Map WP provides an advance proximity search for any post type or buddypress's members based on a given address and radius.
+{Geo-Map-SS4U} is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+any later version.
+ 
+{Geo-Map-SS4U} is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with {Geo-Map-SS4U}. If not, see {https://www.gnu.org/licenses/gpl-2.0.html}.
 
 == Description ==
 
@@ -14,8 +28,8 @@ Using google API tool Geo Map SS4U
 
 = Key features of Geo Map SS4U =
 
-* Search nearby places - The Radius is selected using the drop-down. The maximum radius is fixed according to the backend settings.
-* Pagination - On clicking the more link in the search nearby place results the additional results are added with the current result list
+* Search nearby places - The 'radius' is selected using the drop-down. The maximum radius is fixed according to the backend settings.
+* Pagination - On clicking the 'more' link in the search, the additional results are added with the current result list
 
 = General settings =
 
@@ -44,8 +58,14 @@ Using google API tool Geo Map SS4U
 * Go to Plugins screen and find the newly uploaded Plugin in the list.
 * Click Activate Plugin to activate it.
 
-= 1.0 =
-* Initial release
+=Limitations=
 
+  Displays only upto 60 results, as per Google search results
 
+= 1.0 * Initial release
+
+= 1.1 =
+* Implemented radius circle.
+* Improved marker icons styles.
 == Upgrade Notice ==
+None
