@@ -4,7 +4,7 @@
  * Plugin URI: http://www.softsolutions4u.com
  * Description: Plugin for Location search within the certain radius limit
  * Author: Soft Solutions4U
- * Version: 1.0
+ * Version: 1.1
  * Author URI: http://www.softsolutions4u.com
  * @package geo-map-ss4u
  */
